@@ -8,12 +8,14 @@ public class FVCalc {
 		String annualinterestRate = args[1];
 		int years = Integer.parseInt(args[2]);
 
-		double rate = Double.parseDouble(annualinterestRate)/ 100;
-	
+		double rate = Double.parseDouble(annualinterestRate) / 100;
+		double floatingPointDoubleRate = Double.parseDouble(annualinterestRate);
+
+
 		double futureValue = investedSum * Math.pow(1 + rate,years);
 
 
-		System.out.println("After " + years + " years, " + "$" + investedSum + " saved at " + annualinterestRate + "%" + " will yield " + "$" + ((int) futureValue) );
+		System.out.println("After " + years + " years, " + "$" + investedSum + " saved at " + floatingPointDoubleRate + "%" + " will yield " + "$" + ((int) futureValue) );
 
 	}
 }
